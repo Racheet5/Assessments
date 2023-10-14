@@ -1,0 +1,70 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="Style.css" />
+  <head>
+    <title>REGISTER PAGE</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function validate() {
+        var fname = document.getElementById("Tname");
+        var email = document.getElementById("Temail");
+        var date = document.getElementById("Tdate");
+        var country = document.getElementById("Tcountry");
+        var gender = document.getElementById("Tgender");
+        var meal = document.getElementById("Tmeal");
+        if (
+          fname.value == "" ||
+          email.value == "" ||
+          date.value == "" ||
+          gender == "" ||
+          meal == ""
+        ) {
+          alert("All fields Mandatory");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+    <form id="myform" onsubmit="return validate()" action="nextpage.html">
+      <center>
+        <h3><u>Customer Feedback Form</u></h3>
+      </center>
+      <label for="fname">Name</label>
+      <input id="Tname" type="text" placeholder="Full Name" /><br /><br />
+
+      <label for="email">Email</label>
+      <input id="Temail" type="text" placeholder=" Email" /><br /><br />
+
+      <label for="date">Date of Birth</label>
+      <input id="Tdate" type="text" placeholder="dd-mm-yyyy" /><br /><br />
+
+      <label for="country">Country</label>
+      <select id="Tcountry" name="country" placeholder="India">
+        <option value="india">India</option>
+        <option value="uk">UK</option>
+        <option value="usa">USA</option>
+        <option value="australia">Australia</option>
+        <option value="russia">Russia</option>
+        <option value="sri lanka">Sri Lanka</option>
+        <option value="japan">Japan</option></select
+      ><br /><br />
+
+      <label for="gender">Gender</label>
+      <input type="radio" name="gender" value="male" /> Male
+      <input type="radio" name="gender" value="female" /> Female <br /><br />
+
+      <label for="meal">Meal Preference</label>
+
+      <input type="checkbox" id="rice" name="meal1" value="rice" />
+      <label for="rice"> Rice</label>
+
+      <input type="checkbox" id="bread" name="meal2" value="bread" />
+      <label for="bread"> Bread</label><br />
+      <br />
+      <center>
+        <input id="RegisterBtn" type="submit" value="Register" />
+      </center>
+    </form>
+  </body>
+</html>
